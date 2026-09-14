@@ -4,10 +4,10 @@ import { practicals, postlabs } from '../../data/experiments';
 
 interface SidebarProps {
   collapsed: boolean;
-  onToggle: () => void;
+  onToggle?: () => void;
 }
 
-export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
+export default function Sidebar({ collapsed, onToggle: _onToggle }: SidebarProps) {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 

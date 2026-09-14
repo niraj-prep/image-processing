@@ -255,7 +255,6 @@ function processImage(
           canvas.width = newCanvas.width;
           canvas.height = newCanvas.height;
           ctx.drawImage(newCanvas, 0, 0);
-          const newData = ctx.getImageData(0, 0, canvas.width, canvas.height);
           stats.scaleX = sx; stats.scaleY = sy;
           stats.width = canvas.width; stats.height = canvas.height;
           resolve({ result: canvas.toDataURL(), stats });
